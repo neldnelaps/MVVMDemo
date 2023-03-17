@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		75898C8229C20F380098AD7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C8129C20F380098AD7E /* AppDelegate.swift */; };
 		75898C8429C20F380098AD7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C8329C20F380098AD7E /* SceneDelegate.swift */; };
-		75898C8629C20F380098AD7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C8529C20F380098AD7E /* ViewController.swift */; };
+		75898C8629C20F380098AD7E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C8529C20F380098AD7E /* UserViewController.swift */; };
 		75898C8929C20F380098AD7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75898C8729C20F380098AD7E /* Main.storyboard */; };
 		75898C8B29C20F390098AD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75898C8A29C20F390098AD7E /* Assets.xcassets */; };
 		75898C8E29C20F390098AD7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75898C8C29C20F390098AD7E /* LaunchScreen.storyboard */; };
 		75898C9A29C2D3AA0098AD7E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C9929C2D3AA0098AD7E /* UserTableViewCell.swift */; };
+		75898C9C29C4B50B0098AD7E /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C9B29C4B50B0098AD7E /* UsersViewModel.swift */; };
+		75898C9F29C4B5520098AD7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C9E29C4B5520098AD7E /* User.swift */; };
 		CAFD9C06675591ACFC27539F /* Pods_MVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9C25C2CC03D8813A8AC109 /* Pods_MVVMDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +24,14 @@
 		75898C7E29C20F380098AD7E /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75898C8129C20F380098AD7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75898C8329C20F380098AD7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		75898C8529C20F380098AD7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75898C8529C20F380098AD7E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		75898C8829C20F380098AD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75898C8A29C20F390098AD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75898C8D29C20F390098AD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75898C8F29C20F390098AD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75898C9929C2D3AA0098AD7E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		75898C9B29C4B50B0098AD7E /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		75898C9E29C4B5520098AD7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9E1173F189B3D8ABE35F6CC5 /* Pods-MVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.debug.xcconfig"; path = "Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED9C25C2CC03D8813A8AC109 /* Pods_MVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,12 +92,10 @@
 				75898C9529C219E40098AD7E /* Models */,
 				75898C8129C20F380098AD7E /* AppDelegate.swift */,
 				75898C8329C20F380098AD7E /* SceneDelegate.swift */,
-				75898C8529C20F380098AD7E /* ViewController.swift */,
 				75898C8729C20F380098AD7E /* Main.storyboard */,
 				75898C8A29C20F390098AD7E /* Assets.xcassets */,
 				75898C8C29C20F390098AD7E /* LaunchScreen.storyboard */,
 				75898C8F29C20F390098AD7E /* Info.plist */,
-				75898C9929C2D3AA0098AD7E /* UserTableViewCell.swift */,
 			);
 			path = MVVMDemo;
 			sourceTree = "<group>";
@@ -101,6 +103,7 @@
 		75898C9529C219E40098AD7E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				75898C9E29C4B5520098AD7E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +111,8 @@
 		75898C9629C219FA0098AD7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75898CA029C4B56F0098AD7E /* Cells */,
+				75898C8529C20F380098AD7E /* UserViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		75898C9729C21A010098AD7E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				75898C9B29C4B50B0098AD7E /* UsersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +130,14 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		75898CA029C4B56F0098AD7E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				75898C9929C2D3AA0098AD7E /* UserTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				75898C9A29C2D3AA0098AD7E /* UserTableViewCell.swift in Sources */,
-				75898C8629C20F380098AD7E /* ViewController.swift in Sources */,
+				75898C8629C20F380098AD7E /* UserViewController.swift in Sources */,
+				75898C9F29C4B5520098AD7E /* User.swift in Sources */,
 				75898C8229C20F380098AD7E /* AppDelegate.swift in Sources */,
+				75898C9C29C4B50B0098AD7E /* UsersViewModel.swift in Sources */,
 				75898C8429C20F380098AD7E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
