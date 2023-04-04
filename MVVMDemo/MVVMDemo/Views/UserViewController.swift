@@ -11,9 +11,9 @@ import RxSwift
 import RxDataSources
 
 class UserViewController: UIViewController {
-
-    private var viewModel = UsersViewModel()
+    public var viewModel = UsersViewModel()
     private var bag = DisposeBag()
+    
     lazy var tableView : UITableView = {
         let tv = UITableView(frame: self.view.frame, style: .insetGrouped)
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -27,9 +27,11 @@ class UserViewController: UIViewController {
         self.title = "Users"
         let add = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(onTapAdd))
         self.navigationItem.rightBarButtonItem = add
-        viewModel.fetchUsers()
+
+        Task { await viewModel.fetchUsers() }
         bindTableView()
     }
+    
     @objc func onTapAdd(){
         let user = User(userID: 1213, id: 214, title: "CodeTest", body: "Rx Swift Mvvm")
         self.viewModel.addUser(user: user)
@@ -51,8 +53,7 @@ class UserViewController: UIViewController {
         tableView.rx.itemDeleted.subscribe(onNext: { [weak self] indexPath in
             guard let self = self else { return }
             self.viewModel.deleteUser(indexPath: indexPath)
-            
-        })
+        }).disposed(by: bag)
         
         tableView.rx.itemSelected.subscribe(onNext: { indexPath in
             let alert = UIAlertController(title: "Note", message: "Edit Note", preferredStyle: .alert)
@@ -70,6 +71,4 @@ class UserViewController: UIViewController {
     }
 }
 
-extension UserViewController : UITableViewDelegate {
-    
-}
+extension UserViewController : UITableViewDelegate { }

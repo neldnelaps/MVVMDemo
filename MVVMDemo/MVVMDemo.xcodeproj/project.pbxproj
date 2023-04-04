@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		479D1C64B9FA7CF31E65B138 /* Pods_MVVMDemo_MVVMDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D3C021E460EA31DD3D114F /* Pods_MVVMDemo_MVVMDemoUITests.framework */; };
 		5935882839860273D99718BD /* Pods_MVVMDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77F89943B08ADAFCF72F4B1 /* Pods_MVVMDemoTests.framework */; };
+		753E60EE29DC2C0C003CF2F6 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E60ED29DC2C0C003CF2F6 /* UserApi.swift */; };
+		753E60F029DC2D59003CF2F6 /* ErrorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E60EF29DC2D59003CF2F6 /* ErrorApi.swift */; };
+		753E60F529DC50E4003CF2F6 /* UserApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E60F429DC50E4003CF2F6 /* UserApiTests.swift */; };
 		75898C8229C20F380098AD7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C8129C20F380098AD7E /* AppDelegate.swift */; };
 		75898C8429C20F380098AD7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C8329C20F380098AD7E /* SceneDelegate.swift */; };
 		75898C8629C20F380098AD7E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C8529C20F380098AD7E /* UserViewController.swift */; };
@@ -20,7 +23,6 @@
 		75898C9F29C4B5520098AD7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75898C9E29C4B5520098AD7E /* User.swift */; };
 		75A6F88A29DAAD790033ACA6 /* MVVMDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A6F88929DAAD790033ACA6 /* MVVMDemoUITests.swift */; };
 		75A6F88C29DAAD790033ACA6 /* MVVMDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A6F88B29DAAD790033ACA6 /* MVVMDemoUITestsLaunchTests.swift */; };
-		75A6F89929DAAD850033ACA6 /* MVVMDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A6F89829DAAD850033ACA6 /* MVVMDemoTests.swift */; };
 		CAFD9C06675591ACFC27539F /* Pods_MVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9C25C2CC03D8813A8AC109 /* Pods_MVVMDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,9 @@
 		0A20AF9FC21FC4FCD03D035E /* Pods-MVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.release.xcconfig"; path = "Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		566C5E5E27E6642A5821E660 /* Pods-MVVMDemo-MVVMDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo-MVVMDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMDemo-MVVMDemoUITests/Pods-MVVMDemo-MVVMDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6933E87B351373E02EB7AEBC /* Pods-MVVMDemo-MVVMDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo-MVVMDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-MVVMDemo-MVVMDemoUITests/Pods-MVVMDemo-MVVMDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		753E60ED29DC2C0C003CF2F6 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		753E60EF29DC2D59003CF2F6 /* ErrorApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorApi.swift; sourceTree = "<group>"; };
+		753E60F429DC50E4003CF2F6 /* UserApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiTests.swift; sourceTree = "<group>"; };
 		75898C7E29C20F380098AD7E /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75898C8129C20F380098AD7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75898C8329C20F380098AD7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +65,6 @@
 		75A6F88929DAAD790033ACA6 /* MVVMDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUITests.swift; sourceTree = "<group>"; };
 		75A6F88B29DAAD790033ACA6 /* MVVMDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		75A6F89629DAAD850033ACA6 /* MVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75A6F89829DAAD850033ACA6 /* MVVMDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoTests.swift; sourceTree = "<group>"; };
 		979D3E717CFD12150A2FAB8F /* Pods-MVVMDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMDemoTests/Pods-MVVMDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E1173F189B3D8ABE35F6CC5 /* Pods-MVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.debug.xcconfig"; path = "Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A3D534C4DF575F35561D38F1 /* Pods-MVVMDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemoTests.release.xcconfig"; path = "Target Support Files/Pods-MVVMDemoTests/Pods-MVVMDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +124,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		753E60F329DC50B9003CF2F6 /* ApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				753E60F429DC50E4003CF2F6 /* UserApiTests.swift */,
+			);
+			path = ApiTests;
+			sourceTree = "<group>";
+		};
 		75898C7529C20F380098AD7E = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +157,7 @@
 		75898C8029C20F380098AD7E /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
-				75898C9829C21A2F0098AD7E /* Services */,
+				75898C9829C21A2F0098AD7E /* API */,
 				75898C9729C21A010098AD7E /* ViewModels */,
 				75898C9629C219FA0098AD7E /* Views */,
 				75898C9529C219E40098AD7E /* Models */,
@@ -184,11 +196,13 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		75898C9829C21A2F0098AD7E /* Services */ = {
+		75898C9829C21A2F0098AD7E /* API */ = {
 			isa = PBXGroup;
 			children = (
+				753E60ED29DC2C0C003CF2F6 /* UserApi.swift */,
+				753E60EF29DC2D59003CF2F6 /* ErrorApi.swift */,
 			);
-			path = Services;
+			path = API;
 			sourceTree = "<group>";
 		};
 		75898CA029C4B56F0098AD7E /* Cells */ = {
@@ -211,7 +225,7 @@
 		75A6F89729DAAD850033ACA6 /* MVVMDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				75A6F89829DAAD850033ACA6 /* MVVMDemoTests.swift */,
+				753E60F329DC50B9003CF2F6 /* ApiTests */,
 			);
 			path = MVVMDemoTests;
 			sourceTree = "<group>";
@@ -460,6 +474,8 @@
 				75898C9F29C4B5520098AD7E /* User.swift in Sources */,
 				75898C8229C20F380098AD7E /* AppDelegate.swift in Sources */,
 				75898C9C29C4B50B0098AD7E /* UsersViewModel.swift in Sources */,
+				753E60F029DC2D59003CF2F6 /* ErrorApi.swift in Sources */,
+				753E60EE29DC2C0C003CF2F6 /* UserApi.swift in Sources */,
 				75898C8429C20F380098AD7E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75A6F89929DAAD850033ACA6 /* MVVMDemoTests.swift in Sources */,
+				753E60F529DC50E4003CF2F6 /* UserApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

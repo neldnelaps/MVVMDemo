@@ -11,25 +11,16 @@ import RxCocoa
 import RxDataSources
 
 class UsersViewModel {
+    
     var users = BehaviorSubject(value: [SectionModel(model: "", items: [User]())])
     
-    func fetchUsers () {
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
-        let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
-            guard  let data = data else {
-                return
-            }
-            do {
-                let responseData = try JSONDecoder().decode([User].self, from: data)
-                let sectionUser = SectionModel(model: "First", items: [User(userID: 3, id: 32, title: "First item", body: "body" )])
-                let secondSection = SectionModel(model: "Second", items: responseData)
-                self.users.on(.next([sectionUser, secondSection]))
-            }
-            catch {
-                print(error.localizedDescription)
-            }
-        }
-        task.resume()
+    private var apiUser: UserApiProtocol = UserApi()
+    
+    func fetchUsers() async {
+        let users = (try? await apiUser.getUsers()) ?? []
+        let sectionUser = SectionModel(model: "First", items: [User(userID: 3, id: 32, title: "First item", body: "body" )])
+        let secondSection = SectionModel(model: "Second", items: users)
+        self.users.on(.next([sectionUser, secondSection]))
     }
     
     func addUser(user: User){
@@ -54,4 +45,5 @@ class UsersViewModel {
         sections[indexPath.section] = currentSection
         self.users.onNext(sections)
     }
+    
 }
